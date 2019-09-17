@@ -6,6 +6,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <style>
+        body{
+            background-color: gray;
+        }
         .list{
             /*
              * Khi inspect: Màu xanh da trời là content, màu xanh lá cây là phần padding, màu cam là phần magin
@@ -13,11 +16,34 @@
              * có các số ở dưới (vd ở phần xanh lá cây có số 8 ở top và dấu - ở left thì có nghĩa
              * padding top là 8px còn padding k có gì)
              */
-            padding: 10px;
-            margin: 20px;
-            border-width: 5px 5px 5px 10px;/*top right left bottom*/
-            border-style: solid;
-            border-color: aqua;
+            padding: 15px;
+            margin: 30px;
+            border-radius: 5px;
+            color: white;
+        }
+        .list-gradient{
+            background: rgb(2,0,36);
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+        }
+        .list-pattern{
+            background-image: url(./pattent.jpg);
+            /* Giảm còn 20% kích thước thật của nó do nó to quá */
+            background-size: 20%;
+            height: 100px;
+        }
+        .list-item-img{
+            background-image: url(./bg.jpeg);
+            height: 150px;
+            background-size: cover;
+            background-position: 0 -350px;
+
+        }
+        .list-item-parallax{
+            background-image: url(./bg.jpeg);
+            height: 150px;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: 0 -265px;
         }
     </style>
   </head>
@@ -25,11 +51,36 @@
       <div class="list">
           List items 1 
       </div>
-      <div class="list">
+      <div class="list list-gradient">
           List items 2
       </div>
-      <div class="list">
+      <div class="list list-pattern">
+          <!-- pattern là kiểu ảnh khi lặp lại nó sẽ ra một hình nào đấy  -->
           List items 3
+      </div>
+      <div class="list list-item-img">
+          List items 4
+      </div>
+      <div class="list list-item-parallax">
+          List items 5
+      </div>
+      <div class="list">
+          List items 6
+      </div>
+      <div class="list">
+          List items 7
+      </div>
+      <div class="list">
+          List items 8
+      </div>
+      <div class="list">
+          List items 9
+      </div>
+      <div class="list">
+          List items 10
+      </div>
+      <div class="list">
+          List items 11
       </div>
   </body>
 </html>
