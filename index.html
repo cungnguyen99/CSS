@@ -5,6 +5,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <style>
         body{
             background-color: gray;
@@ -54,7 +56,35 @@
             text-decoration: none;
         }
         .btn-click:hover{
-            background-color: #2e302f;
+            background-color: #434644;
+            text-decoration: none;
+        }
+
+        p::first-line {
+            color: #a1cfe4;
+            font-variant: small-caps;
+        }
+
+        p.intro::first-letter {
+            color: #a1cfe4;
+            font-size:200%;
+        } 
+
+        .p-before::after{
+            content:"<- EXCITING!"; 
+            color: green;
+        }
+        .p-after::before{
+            content:"EXCITING ->"; 
+            color: green;
+        }
+        /* 
+        FLEX BOX 
+        Trước khi sử dụng flex box cho 1 element nào đó thì phải khai báo element cha thuộc tính display: flex
+        */
+        .container{
+            display: flex;
+            flex-direction: column;
         }
     </style>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -83,21 +113,46 @@
       <div class="list">
             <i class="fas fa-quote-left fa-3x fa-pull-left"></i>
             Gatsby believed in the green light, the orgastic future that year by year recedes before us.
-            It eluded us then, but that’s no matter — tomorrow we will run faster, stretch our arms further...
+            It eluded us then, but that’s no matter — tomorrow <a href="http://phimmoi.net" class="btn-click">Phim moi</a> we will run faster, stretch our arms further...
             And one fine morning — So we beat on, boats against the current, borne back ceaselessly into the past.
       </div>
-      <div class="list">
-            <a href="http://phimmoi.net" class="btn-click">Phim moi</a>
-      </div>
-      <div class="list">
+      <div class="text-center text-white">
           Một elenment có thuộc tính inline thì không thay đổi được chiều cao chiều rộng margin nhưng thay đổi được padding.
           Còn block thay đổi được hết.
       </div>
-      <div class="list">
-          List items 10
+      <div class="container text-white">
+          <div class="row">
+              <div class="col-md">
+                  a > b Chỉ tìm trong class a có b là con, không phải là cháu.
+              </div>
+              <div class="col-md">
+                  a b + c Chỉ tìm trong class a có b là con và lấy <em>một</em> element có class c là anh em sau nó.
+              </div>
+              <div class="col-md">
+                  a b ~ c Chỉ tìm trong class a có b là con và lấy <em>những</em> element có class c là anh em sau nó.
+              </div>
+          </div>
       </div>
-      <div class="list">
-          List items 11
+      <div class="container">
+          <div class="row">
+              <div class="col-md">
+                <p>You can use the ::first-line pseudo-element to add a special effect to the first line of a text. Some more text. And even more, and more.</p>
+              </div>
+              <div class="col-md">
+                <p class="intro">This is an introduction. Some more text. And even more, and more</p>
+              </div>
+              <div class="col-md">
+                <p class="p-before">This is a heading Some more text. And even more, and more</p>
+              </div>
+              <div class="col-md">
+                <p class="p-after">This is a heading Some more text. And even more, and more</p>
+              </div>
+          </div>
       </div>
+      <div class="container">
+            <div class="child-1">Child 1</div>
+            <div class="child-2">Child 2</div>
+            <div class="child-3">Child 3</div>
+        </div>
   </body>
 </html>
