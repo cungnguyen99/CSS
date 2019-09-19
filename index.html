@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <title>Title</title>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -11,6 +10,7 @@
         body{
             background-color: gray;
             font-family: Arial, Helvetica, sans-serif;
+            overflow-x: hidden;
         }
         .list{
             /*
@@ -82,29 +82,130 @@
         FLEX BOX 
         Trước khi sử dụng flex box cho 1 element nào đó thì phải khai báo element cha thuộc tính display: flex
         */
-        .container{
+        .content-row{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            background-color: #2e302f;
+        }
+        .content-row-between{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: #2e302f;
+        }
+        .content-row-around{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            background-color: #2e302f;
+        }
+        .content-row-evenly{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            background-color: #2e302f;
+        }
+        .content-row-align-center{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-color: #2e302f;
+            height: 120px;
+        }
+        .content-row-align-end{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-end;
+            background-color: #2e302f;
+            height: 120px;
+        }
+        .content-row-align-stretch{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            /* Đây là giá trị mặc định của align items, chiều cao sẽ dài bằng chiều cao của cha */
+            align-items: stretch;
+            background-color: #2e302f;
+            height: 120px;
+        }
+        .content-row-align-stretch > div{
+            background-color: #4a4d4b;
+            width: 50px;
+        }
+        .content-col{
             display: flex;
             flex-direction: column;
+            height: 120px;
+            justify-content: center;
+            background-color: #2e302f;
+        }
+        .content-col-around{
+            display: flex;
+            flex-direction: column;
+            height: 120px;
+            justify-content: space-around;
+            background-color: #2e302f;
+        }
+        .content-col-align-center{
+            display: flex;
+            flex-direction: column;
+            height: 120px;
+            justify-content: center;
+            align-items: center;
+            background-color: #2e302f;
+        }
+        .content-col-align-end{
+            display: flex;
+            flex-direction: column;
+            height: 120px;
+            justify-content: flex-end;
+            align-items: flex-end;
+            background-color: #2e302f;
+        }
+
+        /* Những thuộc tính flex dành cho con */
+        .content-row-basis{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            background-color: #2e302f;
+        }
+        .content-row-basis div:first-child{
+            background-color: cornflowerblue;
+            /*
+            flex-basis:Tăng chiều rộng của thằng con theo chiều của flex-direction nghĩa là nếu là row thì nó sẽ tăng chiều rộng còn nếu flex-direction là column sẽ tăng chiều cao , chỉ đúng khi tổng chiều rộng của con < chiều rộng của cha 
+            */
+            flex-basis: 230px;
+            /* 
+            flex-grow: chia phần thừa của cha cho các con nên flex-basis sẽ tăng lên. Ví dụ ở trong TH này thì cha đang là 1140 px tổng các con là 930px sẽ chia 210 chia cho 3. Người ta thường chia hết cho 1 con nào đấy có nội dung chính để khi màn hình co hay dãn thì chỉ có mình con đấy thay đổi chiểu rộng(cao). Muốn làm thế thì chỉ cẩn để flex-grow ở một con bằng 1 còn lại tất cả bằng 0. Nghĩa là chia phần thừa ra làm 1 và chia hết cho 1 thằng nào đấy
+            */
+            flex-grow: 0;
+        }
+        .content-row-basis div:last-child{
+            background-color:crimson;
+            flex-basis: 300px;
+            flex-grow: 0;;
+        }
+        .content-row-basis div:nth-child(2){
+            background-color:rgb(212, 113, 133);
+            flex-basis: 400px;
+            flex-grow: 1;
         }
     </style>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   </head>
   <body>
-      <div class="list">
-          List items 1 
-      </div>
       <div class="list list-gradient">
-          List items 2
       </div>
       <div class="list list-pattern">
           <!-- pattern là kiểu ảnh khi lặp lại nó sẽ ra một hình nào đấy  -->
-          List items 3
       </div>
       <div class="list list-item-img">
-          List items 4
       </div>
       <div class="list list-item-parallax">
-          List items 5
       </div>
       <div class="list">
           <!-- trong phần doc của fontawsome nó có hướng dẫn thêm các class như tăng size hay làm icon chuyển động -->
@@ -149,10 +250,78 @@
               </div>
           </div>
       </div>
-      <div class="container">
-            <div class="child-1">Child 1</div>
-            <div class="child-2">Child 2</div>
-            <div class="child-3">Child 3</div>
+      <div class="container content-row text-white">
+            <div class="row">
+                <div class="col-md">child-1</div>
+                <div class="col-md">child-2</div>
+                <div class="col-md">child-3</div>
+            </div>
+        </div>
+      <div class="container content-row-between my-4 text-white">
+                <div >child-1</div>
+                <div >child-2</div>
+                <div >child-3</div>
+            </div>
+        </div>
+      <div class="container content-row-around my-4 text-white">
+                <div >child-1</div>
+                <div >child-2</div>
+                <div >child-3</div>
+            </div>
+        </div>
+      <div class="container content-row-evenly my-4 text-white">
+                <div >child-1</div>
+                <div >child-2</div>
+                <div >child-3</div>
+            </div>
+        </div>
+      <div class="container content-row-align-center my-4 text-white">
+                <div >child-1</div>
+                <div >child-2</div>
+                <div >child-3</div>
+            </div>
+        </div>
+      <div class="container content-row-align-end my-4 text-white">
+                <div >child-1</div>
+                <div >child-2</div>
+                <div >child-3</div>
+            </div>
+        </div>
+      <div class="container content-row-align-stretch my-4 text-white">
+                <div >child-1 Lorem ipsum dolor sit</div>
+                <div >child-2</div>
+                <div >child-3</div>
+            </div>
+        </div>
+      <div class="container content-col text-white my-4">
+                <div>child-1</div>
+                <div>child-2</div>
+                <div>child-3</div>
+            </div>
+        </div>
+      <div class="container content-col-around text-white my-4">
+                <div>child-1</div>
+                <div>child-2</div>
+                <div>child-3</div>
+            </div>
+        </div>
+      <div class="container content-col-align-center text-white my-4">
+                <div>child-1</div>
+                <div>child-2</div>
+                <div>child-3</div>
+            </div>
+        </div>
+      <div class="container content-col-align-end text-white my-4">
+                <div>child-1</div>
+                <div>child-2</div>
+                <div>child-3</div>
+            </div>
+        </div>
+      <div class="container content-row-basis text-white my-4">
+                <div>child-1</div>
+                <div>child-2</div>
+                <div>child-3</div>
+            </div>
         </div>
   </body>
 </html>
