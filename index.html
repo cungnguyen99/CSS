@@ -194,6 +194,17 @@
             flex-basis: 400px;
             flex-grow: 1;
         }
+
+        .content-order div:nth-child(2){
+            /* Thay đổi thứ tự xuất hiện của các con flex */
+            order: 2;
+        }
+        .content-order div:last-child{
+            order: 0;
+        }
+        .content-order div:first-child{
+            order: 1;
+        }
     </style>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   </head>
@@ -323,5 +334,12 @@
                 <div>child-3</div>
             </div>
         </div>
+
+        <div class="container content-row-basis content-order text-white my-4">
+            <div>child-1</div>
+            <div>child-2</div>
+            <div>child-3</div>
+        </div>
+    </div>
   </body>
 </html>
