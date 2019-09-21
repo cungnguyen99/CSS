@@ -1,0 +1,29 @@
+body,html{
+    margin: 0;
+    padding: 0;
+}
+.weekly-item{
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+.number{
+    font-size: 18px;
+    padding: 0 13px;
+}
+.song-title{
+    font-size: 15px;
+}
+.info{
+    flex-grow: 1;
+}
+.singer{
+    font-size: 13px;
+    color: #999;
+    margin-top: 8px;
+}
+.view-count{
+    font-size: 13px;
+    color: #999;
+}
