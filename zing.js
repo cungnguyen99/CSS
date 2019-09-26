@@ -1,30 +1,3 @@
-// var json=[
-//     {
-//         "id": 1,
-//         "songName": "You are the reason",
-//         "singer": "Calumn Scoot",
-//         "viewSong": 1345
-//     },
-//     {
-//         "id": 2,
-//         "songName": "You are the reason",
-//         "singer": "Calumn Scoot",
-//         "viewSong": 1345
-//     },
-//     {
-//         "id": 3,
-//         "songName": "You are the reason",
-//         "singer": "Calumn Scoot",
-//         "viewSong": 1345
-//     },
-//     {
-//         "id": 4,
-//         "songName": "You are the reason",
-//         "singer": "Calumn Scoot",
-//         "viewSong": 1345
-//     }
-// ]
-
 function render(json){
     var data=JSON.parse(json);
     var content=data.map(function(item){

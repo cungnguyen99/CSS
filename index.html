@@ -205,6 +205,33 @@
         .content-order div:first-child{
             order: 1;
         }
+
+        .container.positon{
+            display: flex;
+        }
+
+        .box{
+            height: 100px;
+            width: 100px;
+        }
+        .red{
+            background-color: red
+        }
+
+        .green{
+            background-color: greenyellow;
+            /* 
+            relative dịch chuyển so với vị trí ban đầu
+            fixed dịch chuyển so với cửa sổ trình duyệt
+            absolute dịch chuyển so với vị trí của thằng cha gần nhất có thuộc tính absolute
+             */
+            position: relative;
+            top: 10px;
+            left: 10px;
+        }
+        .blue{
+            background-color: blue;
+        }
     </style>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   </head>
@@ -340,6 +367,12 @@
             <div>child-2</div>
             <div>child-3</div>
         </div>
+    </div>
+
+    <div class="container positon">
+        <div class="box red"></div>
+        <div class="box green"></div>
+        <div class="box blue"></div>
     </div>
   </body>
 </html>

@@ -27,3 +27,21 @@ body,html{
     font-size: 13px;
     color: #999;
 }
+
+.album-cover{
+    height: 128px;
+    width: 128px;
+    background-image: url('./bg.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+.overlay{
+    /* Cho nó bao phủ vừa khít độ rộng của album-cover */
+    height: 100%;  
+    position: relative; 
+    display: flex;
+    align-items: flex-end;
+    padding: 8px;
+    /* Do padding 8 nên ảnh nó sẽ dài ra nên dùng box-sizing sẽ làm cho nó lùi 8px nhưng ảnh k dài ra */
+    box-sizing: border-box;
+}
