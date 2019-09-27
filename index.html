@@ -1,18 +1,21 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <title>Title</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <style>
-        body{
+        body {
             background-color: gray;
             font-family: Arial, Helvetica, sans-serif;
             overflow-x: hidden;
         }
-        .list{
+
+        .list {
             /*
              * Khi inspect: Màu xanh da trời là content, màu xanh lá cây là phần padding, màu cam là phần magin
              * Còn hình bé ở cuối phần css là tượng trưng cho cái phần mình đang chỉ vào
@@ -24,24 +27,28 @@
             border-radius: 5px;
             color: white;
         }
-        .list-gradient{
-            background: rgb(2,0,36);
-            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+
+        .list-gradient {
+            background: rgb(2, 0, 36);
+            background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
         }
-        .list-pattern{
+
+        .list-pattern {
             background-image: url(./pattent.jpg);
             /* Giảm còn 20% kích thước thật của nó do nó to quá */
             background-size: 20%;
             height: 100px;
         }
-        .list-item-img{
+
+        .list-item-img {
             background-image: url(./bg.jpeg);
             height: 150px;
             background-size: cover;
             background-position: 0 -350px;
             color: #2e302f;
         }
-        .list-item-parallax{
+
+        .list-item-parallax {
             background-image: url(./bg.jpeg);
             height: 150px;
             background-attachment: fixed;
@@ -49,13 +56,15 @@
             background-position: 0 -265px;
             color: #2e302f;
         }
-        .btn-click{
+
+        .btn-click {
             color: gold;
             background-color: #4b4e4d;
             padding: 10px 15px;
             text-decoration: none;
         }
-        .btn-click:hover{
+
+        .btn-click:hover {
             background-color: #434644;
             text-decoration: none;
         }
@@ -67,46 +76,52 @@
 
         p.intro::first-letter {
             color: #a1cfe4;
-            font-size:200%;
-        } 
+            font-size: 200%;
+        }
 
-        .p-before::after{
-            content:"<- EXCITING!"; 
+        .p-before::after {
+            content: "<- EXCITING!";
             color: green;
         }
-        .p-after::before{
-            content:"EXCITING ->"; 
+
+        .p-after::before {
+            content: "EXCITING ->";
             color: green;
         }
+
         /* 
         FLEX BOX 
         Trước khi sử dụng flex box cho 1 element nào đó thì phải khai báo element cha thuộc tính display: flex
         */
-        .content-row{
+        .content-row {
             display: flex;
             flex-direction: row;
             justify-content: flex-end;
             background-color: #2e302f;
         }
-        .content-row-between{
+
+        .content-row-between {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             background-color: #2e302f;
         }
-        .content-row-around{
+
+        .content-row-around {
             display: flex;
             flex-direction: row;
             justify-content: space-around;
             background-color: #2e302f;
         }
-        .content-row-evenly{
+
+        .content-row-evenly {
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
             background-color: #2e302f;
         }
-        .content-row-align-center{
+
+        .content-row-align-center {
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -114,7 +129,8 @@
             background-color: #2e302f;
             height: 120px;
         }
-        .content-row-align-end{
+
+        .content-row-align-end {
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -122,7 +138,8 @@
             background-color: #2e302f;
             height: 120px;
         }
-        .content-row-align-stretch{
+
+        .content-row-align-stretch {
             display: flex;
             flex-direction: row;
             justify-content: space-around;
@@ -131,25 +148,29 @@
             background-color: #2e302f;
             height: 120px;
         }
-        .content-row-align-stretch > div{
+
+        .content-row-align-stretch>div {
             background-color: #4a4d4b;
             width: 50px;
         }
-        .content-col{
+
+        .content-col {
             display: flex;
             flex-direction: column;
             height: 120px;
             justify-content: center;
             background-color: #2e302f;
         }
-        .content-col-around{
+
+        .content-col-around {
             display: flex;
             flex-direction: column;
             height: 120px;
             justify-content: space-around;
             background-color: #2e302f;
         }
-        .content-col-align-center{
+
+        .content-col-align-center {
             display: flex;
             flex-direction: column;
             height: 120px;
@@ -157,7 +178,8 @@
             align-items: center;
             background-color: #2e302f;
         }
-        .content-col-align-end{
+
+        .content-col-align-end {
             display: flex;
             flex-direction: column;
             height: 120px;
@@ -167,13 +189,14 @@
         }
 
         /* Những thuộc tính flex dành cho con */
-        .content-row-basis{
+        .content-row-basis {
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
             background-color: #2e302f;
         }
-        .content-row-basis div:first-child{
+
+        .content-row-basis div:first-child {
             background-color: cornflowerblue;
             /*
             flex-basis:Tăng chiều rộng của thằng con theo chiều của flex-direction nghĩa là nếu là row thì nó sẽ tăng chiều rộng còn nếu flex-direction là column sẽ tăng chiều cao , chỉ đúng khi tổng chiều rộng của con < chiều rộng của cha 
@@ -184,41 +207,47 @@
             */
             flex-grow: 0;
         }
-        .content-row-basis div:last-child{
-            background-color:crimson;
+
+        .content-row-basis div:last-child {
+            background-color: crimson;
             flex-basis: 300px;
-            flex-grow: 0;;
+            flex-grow: 0;
+            ;
         }
-        .content-row-basis div:nth-child(2){
-            background-color:rgb(212, 113, 133);
+
+        .content-row-basis div:nth-child(2) {
+            background-color: rgb(212, 113, 133);
             flex-basis: 400px;
             flex-grow: 1;
         }
 
-        .content-order div:nth-child(2){
+        .content-order div:nth-child(2) {
             /* Thay đổi thứ tự xuất hiện của các con flex */
             order: 2;
         }
-        .content-order div:last-child{
+
+        .content-order div:last-child {
             order: 0;
         }
-        .content-order div:first-child{
+
+        .content-order div:first-child {
             order: 1;
         }
 
-        .container.positon{
+        .container.positon {
             display: flex;
         }
 
-        .box{
+        .box {
             height: 100px;
             width: 100px;
         }
-        .red{
+
+        .red {
             background-color: red
         }
 
-        .green{
+        .green {
             background-color: greenyellow;
             /* 
             relative dịch chuyển so với vị trí ban đầu
@@ -229,144 +258,227 @@
             top: 10px;
             left: 10px;
         }
-        .blue{
+
+        .blue {
             background-color: blue;
         }
-    </style>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-  </head>
-  <body>
-      <div class="list list-gradient">
-      </div>
-      <div class="list list-pattern">
-          <!-- pattern là kiểu ảnh khi lặp lại nó sẽ ra một hình nào đấy  -->
-      </div>
-      <div class="list list-item-img">
-      </div>
-      <div class="list list-item-parallax">
-      </div>
-      <div class="list">
-          <!-- trong phần doc của fontawsome nó có hướng dẫn thêm các class như tăng size hay làm icon chuyển động -->
-            <i class="fas fa-spinner fa-3x fa-spin"></i>
-      </div>
-      <div class="list">
-            <i class="fas fa-quote-left fa-3x fa-pull-left"></i>
-            Gatsby believed in the green light, the orgastic future that year by year recedes before us.
-            It eluded us then, but that’s no matter — tomorrow <a href="http://phimmoi.net" class="btn-click">Phim moi</a> we will run faster, stretch our arms further...
-            And one fine morning — So we beat on, boats against the current, borne back ceaselessly into the past.
-      </div>
-      <div class="text-center text-white">
-          Một elenment có thuộc tính inline thì không thay đổi được chiều cao chiều rộng margin nhưng thay đổi được padding.
-          Còn block thay đổi được hết.
-      </div>
-      <div class="container text-white">
-          <div class="row">
-              <div class="col-md">
-                  a > b Chỉ tìm trong class a có b là con, không phải là cháu.
-              </div>
-              <div class="col-md">
-                  a b + c Chỉ tìm trong class a có b là con và lấy <em>một</em> element có class c là anh em sau nó.
-              </div>
-              <div class="col-md">
-                  a b ~ c Chỉ tìm trong class a có b là con và lấy <em>những</em> element có class c là anh em sau nó.
-              </div>
-          </div>
-      </div>
-      <div class="container">
-          <div class="row">
-              <div class="col-md">
-                <p>You can use the ::first-line pseudo-element to add a special effect to the first line of a text. Some more text. And even more, and more.</p>
-              </div>
-              <div class="col-md">
-                <p class="intro">This is an introduction. Some more text. And even more, and more</p>
-              </div>
-              <div class="col-md">
-                <p class="p-before">This is a heading Some more text. And even more, and more</p>
-              </div>
-              <div class="col-md">
-                <p class="p-after">This is a heading Some more text. And even more, and more</p>
-              </div>
-          </div>
-      </div>
-      <div class="container content-row text-white">
-            <div class="row">
-                <div class="col-md">child-1</div>
-                <div class="col-md">child-2</div>
-                <div class="col-md">child-3</div>
-            </div>
-        </div>
-      <div class="container content-row-between my-4 text-white">
-                <div >child-1</div>
-                <div >child-2</div>
-                <div >child-3</div>
-            </div>
-        </div>
-      <div class="container content-row-around my-4 text-white">
-                <div >child-1</div>
-                <div >child-2</div>
-                <div >child-3</div>
-            </div>
-        </div>
-      <div class="container content-row-evenly my-4 text-white">
-                <div >child-1</div>
-                <div >child-2</div>
-                <div >child-3</div>
-            </div>
-        </div>
-      <div class="container content-row-align-center my-4 text-white">
-                <div >child-1</div>
-                <div >child-2</div>
-                <div >child-3</div>
-            </div>
-        </div>
-      <div class="container content-row-align-end my-4 text-white">
-                <div >child-1</div>
-                <div >child-2</div>
-                <div >child-3</div>
-            </div>
-        </div>
-      <div class="container content-row-align-stretch my-4 text-white">
-                <div >child-1 Lorem ipsum dolor sit</div>
-                <div >child-2</div>
-                <div >child-3</div>
-            </div>
-        </div>
-      <div class="container content-col text-white my-4">
-                <div>child-1</div>
-                <div>child-2</div>
-                <div>child-3</div>
-            </div>
-        </div>
-      <div class="container content-col-around text-white my-4">
-                <div>child-1</div>
-                <div>child-2</div>
-                <div>child-3</div>
-            </div>
-        </div>
-      <div class="container content-col-align-center text-white my-4">
-                <div>child-1</div>
-                <div>child-2</div>
-                <div>child-3</div>
-            </div>
-        </div>
-      <div class="container content-col-align-end text-white my-4">
-                <div>child-1</div>
-                <div>child-2</div>
-                <div>child-3</div>
-            </div>
-        </div>
-      <div class="container content-row-basis text-white my-4">
-                <div>child-1</div>
-                <div>child-2</div>
-                <div>child-3</div>
-            </div>
-        </div>
 
-        <div class="container content-row-basis content-order text-white my-4">
-            <div>child-1</div>
-            <div>child-2</div>
-            <div>child-3</div>
+        /* MENU */
+        .nav-bar {
+            margin-bottom: 50px;
+        }
+
+        .menu {
+            color: aliceblue;
+            list-style: none;
+            display: flex;
+            padding: 0;
+        }
+
+        .menu li a {
+            padding: 8px 16px;
+            text-decoration: none;
+            color: aliceblue;
+        }
+
+        .sub-menu {
+            list-style: none;
+            position: absolute;
+            padding: 0;
+            left: 0;
+            top: 100%;
+            display: none;
+        }
+
+        li:hover .sub-menu {
+            display: block;
+        }
+
+        .has-submenu {
+            position: relative;
+        }
+
+        /* FLOAT */
+        .header {
+            height: 50px;
+            text-align: center;
+        }
+
+        .sitebar {
+            float: left;
+            width: 30%;
+        }
+
+        .main {
+            margin-left: 30%;
+        }
+
+        /* Khi ta để thế này thì class wrapper cha sẽ chỉ có chiểu cao bằng chiểu cao của thằng k bị floaf
+        tức nó chỉ có h bằng h của main mặc dù .sitebar có chiểu cao dài hơn. Để khắc phục ta làm như ở dưới */
+        .wrapper::after {
+            /* tức là để đằng sau nó có content là một khoảng trống */
+            content: "";
+            clear: both;
+            display: block;
+        }
+
+        .footer {
+            text-align: center;
+        }
+    </style>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="nav-bar">
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li class="has-submenu">
+                <a href="#">About</a>
+                <ul class="sub-menu">
+                    <li><a href="#">Company</a></li>
+                    <li><a href="#">Teams </a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <h3 class="text-center">importan>style>id>class>element</h3>
+    <div class="list list-gradient">
+    </div>
+    <div class="list list-pattern">
+        <!-- pattern là kiểu ảnh khi lặp lại nó sẽ ra một hình nào đấy  -->
+    </div>
+    <div class="list list-item-img">
+    </div>
+    <div class="list list-item-parallax">
+    </div>
+    <div class="list">
+        <!-- trong phần doc của fontawsome nó có hướng dẫn thêm các class như tăng size hay làm icon chuyển động -->
+        <i class="fas fa-spinner fa-3x fa-spin"></i>
+    </div>
+    <div class="list">
+        <i class="fas fa-quote-left fa-3x fa-pull-left"></i>
+        Gatsby believed in the green light, the orgastic future that year by year recedes before us.
+        It eluded us then, but that’s no matter — tomorrow <a href="http://phimmoi.net" class="btn-click">Phim moi</a>
+        we will run faster, stretch our arms further...
+        And one fine morning — So we beat on, boats against the current, borne back ceaselessly into the past.
+    </div>
+    <div class="text-center text-white">
+        Một elenment có thuộc tính inline thì không thay đổi được chiều cao chiều rộng margin nhưng thay đổi được
+        padding.
+        Còn block thay đổi được hết.
+    </div>
+    <div class="container text-white">
+        <div class="row">
+            <div class="col-md">
+                a > b Chỉ tìm trong class a có b là con, không phải là cháu.
+            </div>
+            <div class="col-md">
+                a b + c Chỉ tìm trong class a có b là con và lấy <em>một</em> element có class c là anh em sau nó.
+            </div>
+            <div class="col-md">
+                a b ~ c Chỉ tìm trong class a có b là con và lấy <em>những</em> element có class c là anh em sau nó.
+            </div>
         </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md">
+                <p>You can use the ::first-line pseudo-element to add a special effect to the first line of a text. Some
+                    more text. And even more, and more.</p>
+            </div>
+            <div class="col-md">
+                <p class="intro">This is an introduction. Some more text. And even more, and more</p>
+            </div>
+            <div class="col-md">
+                <p class="p-before">This is a heading Some more text. And even more, and more</p>
+            </div>
+            <div class="col-md">
+                <p class="p-after">This is a heading Some more text. And even more, and more</p>
+            </div>
+        </div>
+    </div>
+    <div class="container content-row text-white">
+        <div class="row">
+            <div class="col-md">child-1</div>
+            <div class="col-md">child-2</div>
+            <div class="col-md">child-3</div>
+        </div>
+    </div>
+    <div class="container content-row-between my-4 text-white">
+        <div>child-1</div>
+        <div>child-2</div>
+        <div>child-3</div>
+    </div>
+    </div>
+    <div class="container content-row-around my-4 text-white">
+        <div>child-1</div>
+        <div>child-2</div>
+        <div>child-3</div>
+    </div>
+    </div>
+    <div class="container content-row-evenly my-4 text-white">
+        <div>child-1</div>
+        <div>child-2</div>
+        <div>child-3</div>
+    </div>
+    </div>
+    <div class="container content-row-align-center my-4 text-white">
+        <div>child-1</div>
+        <div>child-2</div>
+        <div>child-3</div>
+    </div>
+    </div>
+    <div class="container content-row-align-end my-4 text-white">
+        <div>child-1</div>
+        <div>child-2</div>
+        <div>child-3</div>
+    </div>
+    </div>
+    <div class="container content-row-align-stretch my-4 text-white">
+        <div>child-1 Lorem ipsum dolor sit</div>
+        <div>child-2</div>
+        <div>child-3</div>
+    </div>
+    </div>
+    <div class="container content-col text-white my-4">
+        <div>child-1</div>
+        <div>child-2</div>
+        <div>child-3</div>
+    </div>
+    </div>
+    <div class="container content-col-around text-white my-4">
+        <div>child-1</div>
+        <div>child-2</div>
+        <div>child-3</div>
+    </div>
+    </div>
+    <div class="container content-col-align-center text-white my-4">
+        <div>child-1</div>
+        <div>child-2</div>
+        <div>child-3</div>
+    </div>
+    </div>
+    <div class="container content-col-align-end text-white my-4">
+        <div>child-1</div>
+        <div>child-2</div>
+        <div>child-3</div>
+    </div>
+    </div>
+    <div class="container content-row-basis text-white my-4">
+        <div>child-1</div>
+        <div>child-2</div>
+        <div>child-3</div>
+    </div>
+    </div>
+
+    <div class="container content-row-basis content-order text-white my-4">
+        <div>child-1</div>
+        <div>child-2</div>
+        <div>child-3</div>
+    </div>
     </div>
 
     <div class="container positon">
@@ -374,5 +486,26 @@
         <div class="box green"></div>
         <div class="box blue"></div>
     </div>
-  </body>
+
+    <div class="header">Header</div>
+    <div class="wrapper container">
+        <div class="sitebar">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium aliquid culpa cumque
+            asperiores quaerat numquam esse incidunt pariatur, maiores qui ab earum necessitatibus nesciunt nihil
+            eligendi ipsum, nobis rem itaque?Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi vel
+            reiciendis ut fugiat perspiciatis, rerum excepturi Eos?Lorem ipsum, dolor Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Doloremque exercitationem ipsum impedit, porro aperiam perspiciatis autem
+            maiores alias, magni atque blanditiis fugiat asperiores, similique dolore sapiente earum rerum amet velit!
+        </div>
+        <div class="main">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, aperiam omnis recusandae quo
+            repellat velit quia quisquam aut cupiditate eum illo soluta earum officiis deleniti natus consequuntur,
+            delectus esse, assumenda voluptate! Debitis dignissimos suscipit odio deleniti? Adipisci provident enim
+            ipsum ipsa, nam, officiis facilis placeat fugiat sint laborum quaerat distinctio aut consequatur beatae
+            dolore delectus et, voluptatem quod. Ullam delectus molestias id quos aperiam provident. At dolorum impedit
+            debitis deserunt quae quis, accusamus harum perspiciatis quo velit labore iure? Saepe dolores, molestias
+            illo laboriosam, nesciunt quam quidem beatae, reprehenderit asperiores eum dignissimos eos a. Architecto
+            nulla laboriosam quisquam repudiandae accusamus.</div>
+    </div>
+    <div class="footer">Fotter</div>
+</body>
+
 </html>
