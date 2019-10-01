@@ -45,3 +45,47 @@ body,html{
     /* Do padding 8 nên ảnh nó sẽ dài ra nên dùng box-sizing sẽ làm cho nó lùi 8px nhưng ảnh k dài ra */
     box-sizing: border-box;
 }
+
+.album-item{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.album-item .over-lay-img{
+    height: 100%;
+    background-image: url('bg.jpeg');
+    background-position: center;
+    background-size: cover;
+    transition: all .3s;
+}
+.over-lay{
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: rgb(199, 195, 195);
+    background-color: rgba(0, 0, 0, .4);
+    opacity: 0;
+    transition:  all .3s;
+}
+
+.over-lay i{
+    transform: scale(0.5);
+    transition: all .3s;
+}
+.album-item:hover .over-lay{
+    opacity: 1;
+}
+.album-item:hover .over-lay i{
+    transform: scale(1);
+}
+.album-item:hover .over-lay-img{
+    transform: scale(1.2);
+}
